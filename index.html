@@ -7,27 +7,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!-- SVG sprite — defined once, referenced via <use> throughout -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="icon-email" viewBox="0 0 16 16">
-        <path d="M1.75 2A1.75 1.75 0 0 0 0 3.75v8.5C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0 0 16 12.25v-8.5A1.75 1.75 0 0 0 14.25 2Zm.94 2.5h10.62l-5.31 4.078ZM1.5 5.567l5.5 4.222a.75.75 0 0 0 .9 0l5.5-4.222V12.25a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25Z"/>
+        <path
+          d="M1.75 2A1.75 1.75 0 0 0 0 3.75v8.5C0 13.216.784 14 1.75 14h12.5A1.75 1.75 0 0 0 16 12.25v-8.5A1.75 1.75 0 0 0 14.25 2Zm.94 2.5h10.62l-5.31 4.078ZM1.5 5.567l5.5 4.222a.75.75 0 0 0 .9 0l5.5-4.222V12.25a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25Z"
+        />
       </symbol>
       <symbol id="icon-phone" viewBox="0 0 16 16">
-        <path d="M1.5 4.5a2 2 0 0 1 2-2h.5a.75.75 0 0 1 .75.75l.5 3a.75.75 0 0 1-.22.64l-.978.734a7.504 7.504 0 0 0 3.324 3.324l.734-.978a.75.75 0 0 1 .64-.22l3 .5a.75.75 0 0 1 .75.75v.5a2 2 0 0 1-2 2H10C5.302 13.5 2.5 10.698 2.5 6V4.5Z"/>
+        <path
+          d="M1.5 4.5a2 2 0 0 1 2-2h.5a.75.75 0 0 1 .75.75l.5 3a.75.75 0 0 1-.22.64l-.978.734a7.504 7.504 0 0 0 3.324 3.324l.734-.978a.75.75 0 0 1 .64-.22l3 .5a.75.75 0 0 1 .75.75v.5a2 2 0 0 1-2 2H10C5.302 13.5 2.5 10.698 2.5 6V4.5Z"
+        />
       </symbol>
       <symbol id="icon-linkedin" viewBox="0 0 16 16">
-        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854Zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        <path
+          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854Zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+        />
       </symbol>
       <symbol id="icon-github" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+        />
       </symbol>
       <symbol id="icon-link" viewBox="0 0 16 16">
-        <path d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/>
+        <path
+          d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"
+        />
       </symbol>
       <symbol id="icon-download" viewBox="0 0 16 16">
-        <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/>
-        <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.97a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.779a.749.749 0 1 1 1.06-1.06l1.97 1.97Z"/>
+        <path
+          d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
+        />
+        <path
+          d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.97a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.779a.749.749 0 1 1 1.06-1.06l1.97 1.97Z"
+        />
       </symbol>
     </svg>
 
@@ -38,41 +51,39 @@
         <h1>Khushboo Goyal</h1>
         <p class="title">Frontend Engineer · Udaipur, India</p>
         <p class="bio">
-          A dedicated frontend developer with 5+ years of experience, passionate about building
+          A dedicated frontend developer with 5 years of experience, passionate about building
           seamless, user-centric web applications using Next.js, React, and TypeScript. I thrive on
           creating visually appealing, high-performance solutions that enhance user experience.
         </p>
 
         <div class="contacts">
           <a href="mailto:khushboogoyal27@gmail.com">
-            <svg width="14" height="14" fill="currentColor"><use href="#icon-email"/></svg>
+            <svg width="14" height="14" fill="currentColor"><use href="#icon-email" /></svg>
             khushboogoyal27@gmail.com
           </a>
           <a href="tel:9460714147">
-            <svg width="14" height="14" fill="currentColor"><use href="#icon-phone"/></svg>
+            <svg width="14" height="14" fill="currentColor"><use href="#icon-phone" /></svg>
             +91 9460714147
           </a>
           <a href="https://www.linkedin.com/in/kgoyal27/" target="_blank" rel="noopener">
-            <svg width="14" height="14" fill="currentColor"><use href="#icon-linkedin"/></svg>
+            <svg width="14" height="14" fill="currentColor"><use href="#icon-linkedin" /></svg>
             LinkedIn
           </a>
           <a href="https://github.com/k-goyal-27" target="_blank" rel="noopener">
-            <svg width="14" height="14" fill="currentColor"><use href="#icon-github"/></svg>
+            <svg width="14" height="14" fill="currentColor"><use href="#icon-github" /></svg>
             GitHub
           </a>
         </div>
-
       </div>
     </section>
 
     <button id="download-btn" class="download-btn">
-      <svg width="14" height="14" fill="currentColor"><use href="#icon-download"/></svg>
+      <svg width="14" height="14" fill="currentColor"><use href="#icon-download" /></svg>
       Download PDF
     </button>
 
     <!-- MAIN -->
     <main>
-
       <!-- EXPERIENCE -->
       <div class="card">
         <h2>Experience</h2>
@@ -91,15 +102,44 @@
               — transitioned from NFT trading to AI image generation using Stability AI; built
               prompt-based image creation with cropping, resizing, and background removal.
             </li>
-            <li>Integrated customized images with Shopify products for buying, selling, and listing with color and size variants.</li>
-            <li>Developed a creator marketplace enabling creators to manage profiles and sell their products.</li>
-            <li>Implemented chat features using GetStream with text-to-speech and speech-to-text functionalities.</li>
+            <li>
+              Developed a feature-rich music player with play/pause controls, repeat and repeat-once
+              modes, shuffle functionality, track downloads, track and album purchasing, artist
+              like/follow features, and synchronized audio-video playback.
+            </li>
+            <li>
+              Developed an Events feature with event listing and detailed event pages, enabling
+              users to RSVP with options such as Going, Maybe, or Not Going. Implemented support for
+              public, private, and paid events, including ticket purchasing flows for paid events
+              and approval-based access requests for private events managed by event creators.
+            </li>
+            <li>
+              Implemented deep linking and sharing functionality for detail pages, enabling shared
+              links to open directly in the app when installed or fall back to the browser
+              otherwise, while ensuring SEO-friendly web routing and metadata support.
+            </li>
+            <li>
+              Integrated customized images with Shopify products for buying, selling, and listing
+              with color and size variants.
+            </li>
+            <li>
+              Developed a creator marketplace enabling creators to manage profiles and sell their
+              products.
+            </li>
+            <li>
+              Implemented chat features using GetStream with text-to-speech and speech-to-text
+              functionalities.
+            </li>
             <li>Built responsive, animated web pages and an interactive marketplace UI.</li>
             <li>
               <b>BeelineConnect (beelineconnect.com)</b> — worked on a microservice for booking bike
-              servicing appointments; implemented appointment management and shop service integrations.
+              servicing appointments; implemented appointment management and shop service
+              integrations.
             </li>
-            <li><b>Info-moksha</b> — built a fully responsive static website for web and mobile; integrated a user feedback form.</li>
+            <li>
+              <b>Info-moksha</b> — built a fully responsive static website for web and mobile;
+              integrated a user feedback form.
+            </li>
             <li>
               <b>NFT Marketplace — Rally.io</b> — built an NFT management platform for buying,
               selling, listing, and bidding on NFTs with real-time bidding interfaces.
@@ -114,42 +154,47 @@
         <div class="projects-grid">
           <a class="project-card" href="https://openwav.ai/" target="_blank" rel="noopener">
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               openwav.ai
             </div>
             <div class="proj-desc">AI-powered audio &amp; creator platform</div>
           </a>
           <a class="project-card" href="https://opensuperapp.com/" target="_blank" rel="noopener">
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               opensuperapp.com
             </div>
             <div class="proj-desc">AI image generation &amp; creator marketplace platform</div>
           </a>
           <a class="project-card" href="https://opensuperapp.shop/" target="_blank" rel="noopener">
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               opensuperapp.shop
             </div>
             <div class="proj-desc">Shopify-integrated AI image &amp; product marketplace</div>
           </a>
           <a class="project-card" href="https://beelineconnect.com/" target="_blank" rel="noopener">
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               BeelineConnect
             </div>
             <div class="proj-desc">Appointment management for bike servicing</div>
           </a>
           <a class="project-card" href="https://www.vkaninc.com/" target="_blank" rel="noopener">
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               Info-moksha
             </div>
             <div class="proj-desc">Fully responsive static web &amp; mobile site</div>
           </a>
-          <a class="project-card" href="https://wiki.rally.io/rally-io" target="_blank" rel="noopener">
+          <a
+            class="project-card"
+            href="https://wiki.rally.io/rally-io"
+            target="_blank"
+            rel="noopener"
+          >
             <div class="proj-name">
-              <svg width="14" height="14" fill="currentColor"><use href="#icon-link"/></svg>
+              <svg width="14" height="14" fill="currentColor"><use href="#icon-link" /></svg>
               Rally NFT Marketplace
             </div>
             <div class="proj-desc">NFT buy, sell, list &amp; real-time bidding platform</div>
@@ -208,12 +253,13 @@
           <span class="interest-tag">Technology</span>
         </div>
       </div>
-
     </main>
 
     <footer>
       Built with ♥ by Khushboo Goyal &nbsp;·&nbsp;
-      <a href="https://github.com/k-goyal-27" target="_blank" rel="noopener">github.com/k-goyal-27</a>
+      <a href="https://github.com/k-goyal-27" target="_blank" rel="noopener"
+        >github.com/k-goyal-27</a
+      >
     </footer>
 
     <script src="main.js"></script>
