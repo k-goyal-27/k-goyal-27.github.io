@@ -1,0 +1,368 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --tag-bg: #1f3a5f;
+  --tag-text: #79c0ff;
+  --radius: 10px;
+  --max: 860px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── HERO ── */
+.hero {
+  max-width: var(--max);
+  margin: 60px auto 0;
+  padding: 0 24px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #58a6ff 0%, #3fb950 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0d1117;
+  flex-shrink: 0;
+}
+
+.hero-info h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero-info .title {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 4px 0 12px;
+}
+
+.hero-info .bio {
+  font-size: 0.93rem;
+  color: #c9d1d9;
+  max-width: 560px;
+}
+
+/* ── CONTACTS ── */
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.contacts a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.contacts a svg {
+  flex-shrink: 0;
+}
+
+/* ── MAIN LAYOUT ── */
+main {
+  max-width: var(--max);
+  margin: 40px auto 80px;
+  padding: 0 24px;
+  display: grid;
+  gap: 28px;
+}
+
+/* ── SECTION CARD ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+
+.card h2 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── EXPERIENCE ── */
+.exp-item {
+  margin-bottom: 24px;
+}
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.exp-header .role {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.exp-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.exp-meta .company {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.exp-item ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.exp-item ul li {
+  font-size: 0.89rem;
+  color: #c9d1d9;
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-item ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent2);
+  font-size: 0.75rem;
+  top: 2px;
+}
+
+.exp-item ul li b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── PROJECTS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.15s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.project-card .proj-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card .proj-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ── SKILLS ── */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid #1d4a7a;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ── EDUCATION ── */
+.edu-item {
+  margin-bottom: 18px;
+}
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.edu-header .degree {
+  font-weight: 600;
+}
+.edu-header .year {
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+.edu-item .institution {
+  color: var(--accent);
+  font-size: 0.88rem;
+  margin: 2px 0 4px;
+}
+.edu-item .courses {
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+/* ── INTERESTS ── */
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interest-tag {
+  background: #1a2332;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.82rem;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ── DOWNLOAD BUTTON ── */
+.download-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0d1117;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: background 0.15s, transform 0.1s;
+}
+
+.download-btn:hover {
+  background: #79c0ff;
+  transform: translateY(-1px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 560px) {
+  .hero {
+    flex-direction: column;
+  }
+  .exp-header {
+    flex-direction: column;
+  }
+}
+
+/* ── PRINT / PDF ── */
+@media print {
+  .download-btn { display: none; }
+  body { background: #fff; color: #000; }
+  .hero, main { max-width: 100%; padding: 0 16px; }
+  .card { border: 1px solid #ccc; background: #fff; break-inside: avoid; }
+  .card h2 { color: #555; }
+  .exp-item ul li, .edu-item .institution, .proj-desc { color: #333; }
+  .skill-tag { background: #e8f0fe; color: #1a56db; border-color: #a0bfff; }
+  .interest-tag { background: #f5f5f5; color: #555; border-color: #ccc; }
+  .project-card { border-color: #ccc; }
+  footer { display: none; }
+  a { color: #1a56db; }
+}
