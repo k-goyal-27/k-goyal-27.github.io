@@ -353,16 +353,175 @@ footer {
 }
 
 /* ── PRINT / PDF ── */
+@page {
+  size: A4;
+  margin: 12mm 12mm 14mm;
+}
+
 @media print {
-  .download-btn { display: none; }
-  body { background: #fff; color: #000; }
-  .hero, main { max-width: 100%; padding: 0 16px; }
-  .card { border: 1px solid #ccc; background: #fff; break-inside: avoid; }
-  .card h2 { color: #555; }
-  .exp-item ul li, .edu-item .institution, .proj-desc { color: #333; }
-  .skill-tag { background: #e8f0fe; color: #1a56db; border-color: #a0bfff; }
-  .interest-tag { background: #f5f5f5; color: #555; border-color: #ccc; }
-  .project-card { border-color: #ccc; }
-  footer { display: none; }
-  a { color: #1a56db; }
+  html, body {
+    background: #fff;
+    color: #000;
+    font-size: 10.5pt;
+    line-height: 1.42;
+  }
+
+  .download-btn,
+  footer {
+    display: none !important;
+  }
+
+  /* Grid/flex containers fragment badly across printed pages in most
+     engines — fall back to normal block flow so content can split. */
+  main,
+  .exp-item ul,
+  .projects-grid,
+  .skills-list,
+  .interests-list,
+  .contacts {
+    display: block;
+  }
+
+  .hero,
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .avatar {
+    width: 62px;
+    height: 62px;
+    font-size: 1.5rem;
+    background: #58a6ff;
+    color: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .hero-info h1 {
+    font-size: 17pt;
+  }
+  .hero-info .title {
+    margin: 2px 0 6px;
+  }
+  .hero-info .bio {
+    max-width: none;
+  }
+
+  .contacts {
+    margin-top: 8px;
+  }
+  .contacts a {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 14px;
+    color: #333;
+  }
+
+  /* Short cards stay whole so a break never lands mid-section; the long
+     experience card is allowed to split, otherwise it jumps to a fresh
+     page and leaves the previous one half empty. */
+  .card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    break-inside: avoid;
+  }
+
+  .card-flow {
+    break-inside: auto;
+  }
+
+  .card h2 {
+    color: #555;
+    margin-bottom: 10px;
+    break-after: avoid;
+  }
+
+  .exp-item,
+  .edu-item {
+    margin-bottom: 12px;
+    break-inside: auto;
+  }
+
+  .exp-meta {
+    margin-bottom: 6px;
+  }
+
+  .exp-item ul li,
+  .edu-item .institution,
+  .proj-desc,
+  .hero-info .bio {
+    color: #333;
+  }
+
+  .hero-info .title,
+  .exp-meta,
+  .edu-header .year,
+  .edu-item .courses {
+    color: #555;
+  }
+
+  /* On screen this is near-white; on paper it must be ink. */
+  .exp-item ul li b,
+  .exp-header .role,
+  .edu-header .degree {
+    color: #000;
+  }
+
+  .exp-item ul li {
+    margin-bottom: 4px;
+    break-inside: avoid;
+    orphans: 2;
+    widows: 2;
+  }
+
+  .exp-item ul li::before {
+    color: #555;
+  }
+
+  /* Two-up project cards without a grid container. */
+  .project-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 0 1% 8px 0;
+    padding: 8px 10px;
+    border-color: #ccc;
+    break-inside: avoid;
+  }
+
+  .skill-tag,
+  .interest-tag {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .skill-tag {
+    background: #e8f0fe;
+    color: #1a56db;
+    border-color: #a0bfff;
+  }
+
+  .interest-tag {
+    background: #f5f5f5;
+    color: #555;
+    border-color: #ccc;
+  }
+
+  a {
+    color: #1a56db;
+  }
 }
